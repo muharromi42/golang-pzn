@@ -7,6 +7,11 @@ type Customer struct {
 	Age           int
 }
 
+// menginisialisasi struct method
+func (customer Customer) sayHello(name string) {
+	fmt.Println("hello", name, "my name is", customer.Name)
+}
+
 func main() {
 
 	var romi Customer
@@ -29,4 +34,9 @@ func main() {
 
 	kevin := Customer{"kevin", "japan", 20}
 	fmt.Println(kevin)
+
+	// akses struct method
+
+	romi.sayHello("albert")
+	kevin.sayHello("albert")
 }
